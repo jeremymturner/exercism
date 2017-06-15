@@ -2,8 +2,7 @@ def is_pangram(string):
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
     string = string.lower()
 
-    for letter in ALPHABET:
-        if letter not in string:
-            return False
+    if any(letter not in string for letter in ALPHABET):
+        return False
 
     return True
